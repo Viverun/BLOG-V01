@@ -15,8 +15,8 @@ When deploying to Render, you need to set the following environment variables in
 ### Cloudinary Settings (Choose ONE of these options)
 
 **Option 1: Single Cloudinary URL (RECOMMENDED)**
-- `CLOUDINARY_URL` - In the format: `cloudinary://API_KEY:API_SECRET@CLOUD_NAME`
-  - For example: `cloudinary://262439613689484:d4s8L2KxLy6klpUBUijxITtZLSY@dxzkqfvdw`
+- `CLOUDINARY_URL` - In the format: `cloudinary://<API_KEY>:<API_SECRET>@<CLOUD_NAME>`
+  - For example: `******your_cloud_name`
 
 **Option 2: Individual Cloudinary Credentials**
 - `CLOUDINARY_CLOUD_NAME` - Your Cloudinary cloud name
@@ -68,7 +68,7 @@ If profile pictures are not updating after deployment:
 
 2. **Verify Cloudinary Configuration**
    - Confirm that the `CLOUDINARY_URL` environment variable is correctly set in Render
-   - Format should be: `cloudinary://API_KEY:API_SECRET@CLOUD_NAME`
+   - Format should be: `cloudinary://<API_KEY>:<API_SECRET>@<CLOUD_NAME>`
    - Make sure there are no typos or extra characters
 
 3. **Test Your Cloudinary Connection**
@@ -100,7 +100,7 @@ This typically means that the environment variable for Cloudinary is not set cor
 Solution:
 - Double-check the format of your `CLOUDINARY_URL` in the Render dashboard
 - Ensure there are no extra quotes, spaces, or special characters in the environment variable
-- The format should be exactly: `cloudinary://API_KEY:API_SECRET@CLOUD_NAME`
+- The format should be exactly: `cloudinary://<API_KEY>:<API_SECRET>@<CLOUD_NAME>`
 
 ### Import Errors for Cloudinary_Storage
 This means that the `django-cloudinary-storage` package is not installed or not accessible.
